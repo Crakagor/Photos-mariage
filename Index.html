@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Nos photos de mariage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <section class="intro">
+      <h1>Avant de voir les photos…</h1>
+      <p>
+        Le 14 juin, nous nous sommes marié·es entouré·es de vous, et d’un buffet
+        100 % vegan. Ce choix n’est pas “un détail logistique”, c’est une
+        décision profondément liée à ce que nous croyons juste pour les animaux.
+      </p>
+      <p>
+        Sur le moment, nous n’avons pas pris le temps d’aborder la réalité de la
+        souffrance animale. Aujourd’hui, avant de vous partager les photos de ce
+        jour si important pour nous, nous aimerions vous inviter à regarder
+        cette vidéo. Elle montre ce que vivent les animaux en Suisse pour que
+        d’autres mariages puissent être “comme d’habitude”.
+      </p>
+      <p class="note">
+        👉 Pour accéder aux photos, il faudra regarder la vidéo jusqu’au bout.<br>
+        Nous savons que ce n’est pas simple. Justement, c’est bien le problème.
+      </p>
+
+      <button id="startVideoBtn" class="btn-primary">
+        Lancer la vidéo
+      </button>
+    </section>
+
+    <section id="videoSection" class="video-section hidden">
+      <div class="video-wrapper">
+        <video id="mainVideo" preload="metadata">
+          <source src="video/mariage-vegan.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo HTML5.
+        </video>
+
+        <div class="controls">
+          <button id="playPauseBtn" class="btn-secondary">
+            Pause
+          </button>
+        </div>
+      </div>
+
+      <p class="warning">
+        ⚠️ Contenu potentiellement choquant : images réelles d’abattoirs en Suisse.
+      </p>
+    </section>
+
+    <section class="photos-section">
+      <button id="photosBtn" class="btn-primary hidden">
+        Voir les photos du mariage
+      </button>
+      <!--
+        Tu peux remplacer ce bouton par un <a> si tu préfères :
+        <a id="photosLink" class="btn-primary hidden" href="https://lien-vers-la-galerie" target="_blank">
+          Voir les photos du mariage
+        </a>
+      -->
+    </section>
+  </main>
+
+  <!-- Overlay présence -->
+  <div id="presenceOverlay" class="overlay hidden">
+    <div class="overlay-content">
+      <p>
+        Merci d’être encore là. 💚<br>
+        Cliquez sur “Continuer” pour poursuivre la vidéo.
+      </p>
+      <button id="continueBtn" class="btn-primary">
+        Continuer
+      </button>
+    </div>
+  </div>
+</body>
+</html>
